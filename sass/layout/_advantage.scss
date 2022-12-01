@@ -1,0 +1,31 @@
+.advantage-list {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .advantage-list__item {
+    width: calc((100% - 3 * 30px) / 4);
+  }
+  
+  .advantage-list__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .advantage-list__text {
+    font-size: 14px;
+    line-height: 1.71;
+  
+    letter-spacing: 0.03em;
+  }
+  .advantage-list__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f4fa;
+    margin-bottom: 30px;
+    height: 120px;
+  }
