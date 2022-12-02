@@ -5,8 +5,7 @@
   margin-right: auto;
 
   @include mobile {
-    // min-width: 320xp;
-    max-width: 480px;
+    width: 480px;
   }
 
   @include tablet {
