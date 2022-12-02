@@ -1,10 +1,27 @@
 .advantage-list {
     display: flex;
+    flex-direction: column;
     gap: 30px;
+    @include tablet{
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    @include desktop{
+      gap: 30px;
+    }
   }
   
   .advantage-list__item {
-    width: calc((100% - 3 * 30px) / 4);
+   
+    width: auto;
+    @include tablet{
+      width: calc((100% - 30px) / 2);
+    }
+    @include desktop{
+      width: calc((100% - 3 * 30px) / 4);
+    }
   }
   
   .advantage-list__title {
@@ -13,6 +30,11 @@
     line-height: 1.14;
     text-transform: uppercase;
     margin-bottom: 10px;
+    text-align: center;
+    @include tablet{
+      text-align: start;
+    }
+
   }
   
   .advantage-list__text {
