@@ -1,5 +1,7 @@
 .page-header {
     border-bottom: 1px solid #ececec;
+    padding: 16px 0;
+    // добавила паддинг
   }
 
 .header-container {
@@ -14,7 +16,12 @@
     letter-spacing: 0.02em;
   }
 .site-nav__list {
-    display: flex;
+    
+    display: none;
+
+    @include tablet{
+      display: flex;
+    }
   }
 .site-nav__item:not(:last-child) {
     margin-right: 50px;
@@ -80,8 +87,12 @@
   }
   
   .header-contact-list {
-    display: flex;
+    display: none;
+    @include tablet{
+      display: flex;
+    }
   }
+
   .header-contact-list__item:not(:last-child) {
     margin-right: 50px;
   }
@@ -93,5 +104,25 @@
     & {
     fill: currentColor;
   }
+  }
+
+  .menu-toggle {
+    min-height: 40px;
+    min-width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+
+    &:hover,
+    &:focus{
+      fill: var(--accent-color);
+    }
   }
   
