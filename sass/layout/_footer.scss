@@ -8,9 +8,12 @@
     flex-direction: column;
     justify-content: center;
 
-    @include desktop{
-      display: flex;
+    @include tablet{
       flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @include desktop{
       align-items: baseline;
       justify-content: space-between;
       gap: 93px;
@@ -25,7 +28,12 @@
     justify-content: center;
     margin-bottom: 60px;
 
+    @include tablet{
+      margin-right: 165px;
+    }
+
     @include desktop{
+      margin-right: 0;
       margin-bottom: 0;
     }
   }
@@ -145,13 +153,21 @@
       
     }
   }
-  @include desktop{
-    .wrapper-subscribe__input--mr {
-        margin-right: 12px;
-      }
-  }
-  
 
+
+  .wrapper-subscribe__input--mr{
+    @include tablet{
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @include desktop{
+      margin-left: 0;
+      margin-right: 12px;
+    }
+  }
+
+ 
+  
  
   .subscribe-form__text {
     font-weight: 700;
@@ -180,6 +196,10 @@
     color: var(--primary-white-color);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     margin-bottom: 20px;
+
+    @include tablet{
+      width: 450px;
+    }
 
     @include desktop{
       margin-bottom: 0;
