@@ -1,12 +1,20 @@
 .page-header {
     border-bottom: 1px solid #ececec;
     padding: 16px 0;
+
+    @include tablet{
+      padding: 0;
+    }
     // добавила паддинг
   }
 
 .header-container {
     display: flex;
+    justify-content: space-between; 
     align-items: center;
+    @include tablet{
+      justify-content: space-between;  
+    }
   }
 
 .site-nav {
@@ -63,26 +71,40 @@
 
 
   .header-contact {
-    margin-left: auto;
+
+    @include desktop{
+      margin-left: auto;
+    }
+    
   }
   .header-contact-list__link {
     color: var(--main-text-color);
     text-decoration: none;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: calc(14 / 12);
+   
     letter-spacing: 0.02em;
+
+    @include desktop{
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
   .header-contact-list__link {
     display: flex;
-    justify-content: center;
+    
+    
     align-items: center;
-    padding: 32px 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
     &:hover,
     &:focus {
     color: var(--accent-color);
+    }
+    @include desktop{
+       padding: 32px 0;
+       justify-content: center;
     }
   }
   
@@ -90,11 +112,20 @@
     display: none;
     @include tablet{
       display: flex;
+      flex-direction: column;
+    }
+    @include desktop{
+      flex-direction: row;
     }
   }
 
   .header-contact-list__item:not(:last-child) {
-    margin-right: 50px;
+    margin-bottom: 10px;
+    @include desktop{
+      margin-right: 50px;
+    }
+    
+
   }
   
   .header-contact-list__icon {
@@ -106,7 +137,7 @@
   }
   }
 
-  .menu-toggle {
+  .menu_btn {
     min-height: 40px;
     min-width: 40px;
     display: flex;
@@ -115,14 +146,24 @@
   
     margin: 0;
     padding: 0;
+  
     background-color: transparent;
     cursor: pointer;
     border: none;
     outline: none;
 
-    &:hover,
-    &:focus{
+    &:hover .menu_btn-icon, 
+    &:focus .menu_btn-icon{
       fill: var(--accent-color);
     }
+
+    @include tablet{
+      display: none;
+    }
+
   }
-  
+
+  .menu_btn-icon{
+    fill: var(--title-text-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
