@@ -121,11 +121,6 @@
 
   .header-contact-list__item:not(:last-child) {
     margin-bottom: 10px;
-    @include desktop{
-      margin-right: 50px;
-      margin-bottom: 0;
-    }
-    // mb
 
   }
   
