@@ -53,12 +53,23 @@
   }
   
   .form-agreement {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14 / 12);
     color: var(--main-text-color);
     text-align: center;
+    letter-spacing: 0.03em;
     margin-bottom: 30px;
+
+    @include desktop{
+      font-size: 14px;
+      line-height: 1.71;
+    }
+   
+
+    
+   
+   
   }
   .form-agreement__checkbox {
     opacity: 0;
