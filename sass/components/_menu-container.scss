@@ -5,6 +5,8 @@
     width: 100vw;
     height: 100vh;
     padding: 48px 40px;
+   
+
     background-color: var(--primary-white-color);
     z-index: 999;
   
@@ -13,6 +15,8 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+        
 
   }
   
@@ -67,7 +71,6 @@
     font-weight: 500;
     font-size: 34px;
     line-height: calc( 40 / 34);
-/* identical to box height */
     letter-spacing: 0.02em;
     color: var(--accent-color);
 }
