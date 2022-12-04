@@ -121,7 +121,10 @@
 
   .header-contact-list__item:not(:last-child) {
     margin-bottom: 10px;
-
+    @include desktop{
+      margin-bottom: 0;
+      margin-right: 50px;
+    }
   }
   
   .header-contact-list__icon {

@@ -603,6 +603,12 @@ body {
 .header-contact-list__item:not(:last-child) {
   margin-bottom: 10px;
 }
+@media screen and (min-width: 1200px) {
+  .header-contact-list__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 50px;
+  }
+}
 
 .header-contact-list__icon {
   fill: currentColor;
