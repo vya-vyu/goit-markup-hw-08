@@ -10,6 +10,9 @@
   
     transform: translateX(100%);
     transition: transform 250ms ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
   }
   
@@ -25,9 +28,9 @@
 
   }
 
-.mobile-menu{
-    margin-bottom: 300px;
-} 
+// .mobile-menu{
+//     margin-bottom: 300px;
+// } 
 
  .mobile-menu_item:not(:last-child){
     margin-bottom: 36px;
