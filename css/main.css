@@ -1151,6 +1151,11 @@ body {
 .portfolio-section {
   padding-bottom: 40px;
 }
+@media screen and (min-width: 1200px) {
+  .portfolio-section {
+    padding-bottom: 94px;
+  }
+}
 
 .primary {
   color: var(--primary-white-color);
